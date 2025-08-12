@@ -1,0 +1,44 @@
+@import './colors.css';
+
+* {
+    font-family: Liga SFMono Nerd Font;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: @foreground;
+    border-radius: 0px;
+}
+
+
+#workspaces button.active {
+    background-color: @foreground;
+    color: @background;
+    border-radius: 0px;
+}
+
+#wireplumber,
+#backlight,
+#battery
+{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#network{
+   margin-left: 0.5em;
+   margin-right: 0.8em;
+}
+
+#bluetooth {
+    margin-right: 0.4em;
+}

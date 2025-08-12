@@ -1,0 +1,48 @@
+#!/bin/sh
+
+
+# change to your wallpaper folder
+WALL_DIR="${WALL_DIR:-$HOME/wallpapers}"
+
+# pick the image
+if [ -n "$1" ]; then
+  WALL="$1"
+else
+  WALL=$(find "$WALL_DIR" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.jpeg' \) \
+         | shuf -n1)
+fi
+
+if [ ! -f "$WALL" ]; then
+  echo "❌  No wallpaper found! Check \$WALL_DIR ($WALL_DIR) or pass a file as \$1."
+  exit 1
+fi
+
+# set wallpaper via simple-wayland-wallpaper (swww)
+swww img "$WALL" >/dev/null 2>&1
+
+# theme the system via hellwal
+#hellwal -i "$WALL" >/dev/null 2>&1
+hellwal -i "$WALL" -m >/dev/null 2>&1 
+
+ln -sf ~/.cache/hellwal/colors.json ~/.cache/wal/colors.json  
+pywalfox update
+
+#waybar
+ln -sf ~/.cache/hellwal/waybar-colors.css ~/.config/waybar/colors.css 
+ln -sf ~/.cache/hellwal/waybar-colors.css ~/.config/walker/themes/colors.css 
+
+#hyprland
+ln -sf ~/.cache/hellwal/hyprland-colors.conf ~/.config/hypr/colors.conf
+
+# for pywal16.nvim, janky for now
+mkdir -p ~/.cache/wal
+ln -sf ~/.cache/hellwal/colors.vim ~/.cache/wal/colors-wal.vim
+
+pkill waybar
+waybar &
+
+
+echo "✨  New look deployed with:"
+echo "    • Wallpaper: $WALL"
+echo "    • Colorscheme: extracted via hellwal"
+

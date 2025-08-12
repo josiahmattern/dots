@@ -1,0 +1,18 @@
+[window]
+
+opacity = 0.6
+
+padding.x = 10
+padding.y = 10
+
+#decorations = "Full"
+#decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal.family = "Liga SFMono Nerd Font"
+bold.family = "Liga SFMono Nerd Font"
+italic.family = "Liga SFMono Nerd Font"
+bold_italic.family = "Liga SFMono Nerd Font"
+
+size = 15.0
