@@ -1,1 +1,1 @@
-**My sway config files for arch linux**
+**my hyprland config files for arch**
