@@ -1,0 +1,86 @@
+[window]
+opacity = 0.75
+decorations = "Buttonless"
+blur = true
+
+[window.padding]
+x = 8
+y = 8
+
+[font]
+size = 18.0
+
+[font.normal]
+family = "CaskaydiaMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "CaskaydiaMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaMono Nerd Font"
+style = "Italic"
+
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xabb2bf"
+
+[colors.cursor]
+text   = "0x000000"
+cursor = "0xabb2bf"
+
+[colors.selection]
+text       = "0x000000"
+background = "0xe2be7d"
+
+[colors.search.matches]
+foreground = "0x000000"
+background = "0xe2be7d"
+
+[colors.search.focused_match]
+foreground = "0x000000"
+background = "0x61afef"
+
+[colors.hints.start]
+foreground = "0x000000"
+background = "0x2bbac5"
+
+[colors.hints.end]
+foreground = "0x000000"
+background = "0xd19a66"
+
+[colors.footer_bar]
+background = "0x000000"
+foreground = "0x7f848e"
+
+[colors.normal]
+black   = "0x000000"
+red     = "0xef596f"
+green   = "0x89ca78"
+yellow  = "0xe5c07b"
+blue    = "0x61afef"
+magenta = "0xd55fde"
+cyan    = "0x2bbac5"
+white   = "0xabb2bf"
+
+[colors.bright]
+black   = "0x434852"
+red     = "0xef596f"
+green   = "0x89ca78"
+yellow  = "0xe5c07b"
+blue    = "0x61afef"
+magenta = "0xd55fde"
+cyan    = "0x2bbac5"
+white   = "0xabb2bf"
+
+[colors.dim]
+black   = "0x000000"
+red     = "0xef596f"
+green   = "0x89ca78"
+yellow  = "0xe5c07b"
+blue    = "0x61afef"
+magenta = "0xd55fde"
+cyan    = "0x2bbac5"
+white   = "0xabb2bf"
